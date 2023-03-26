@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'unityci/editor:2020.3.10f1-ubuntu20.04'
+            image 'unityci/editor:ubuntu-2022.2.12f1-windows-mono-1.0.1'
             args '-u root:root -v /tmp/.X11-unix:/tmp/.X11-unix:rw --privileged'
         }
     }
