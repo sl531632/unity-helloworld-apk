@@ -32,3 +32,9 @@ obj/
 *.unitypackage
 *.DS_Store
 *.meta
+*.apk
+*.log
+
+
+
+logs/*
