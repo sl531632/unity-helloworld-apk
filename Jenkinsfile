@@ -14,6 +14,7 @@ pipeline {
 					//sh './unity-accelerator.sh'
 					
 					sh 'export UNITY_LICENSE="$(cat /root/.local/share/unity3d/Unity/Unity_lic.ulf)"'
+					sh 'echo 123 $UNITY_LICENSE  ABC'
 					sh 'echo "$UNITY_LICENSE" | base64 --decode | gzip > /root/.local/share/unity3d/Unity/Unity_lic.ulf'
 
 					// 编译 Unity 项目
