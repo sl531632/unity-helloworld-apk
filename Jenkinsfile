@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Archive') {
             steps {
-                archiveArtifacts artifacts: 'output/build/**/*', fingerprint: true
+                archiveArtifacts artifacts: '/build/unity-demo/*.apk', fingerprint: true
             }
         }
     }
