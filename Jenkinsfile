@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'ssoor/unity3d:2017.4.8f1-android'
-            args '-u root:root  -v /root/jenkins/workspace/unity-demo:/workspace/unity-demo -v /tmp/.X11-unix:/tmp/.X11-unix:rw --privileged'
+            image 'unityci/editor:ubuntu-2022.2.12f1-windows-mono-1.0.1'
+            args '-u root:root -v /root/jenkins/lic/Unity_lic.ulf:/root/.local/share/unity3d/Unity/Unity_lic.ulf  -e UNITY_LICENSE_PATH=/root/.local/share/unity3d/Unity/Unity_lic.ulf -v /tmp/.X11-unix:/tmp/.X11-unix:rw --privileged'
         }
     }
     stages {
