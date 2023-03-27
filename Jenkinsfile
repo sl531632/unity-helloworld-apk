@@ -12,8 +12,8 @@ pipeline {
                     xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/unity/Editor/Unity \
                     -quit \
                     -batchmode \
-                    -logfile ./unity-build.log \
-                    -customBuildPath ./output/build \
+                    -logfile /opt/base/unity-build.log \
+                    -customBuildPath /opt/output/build \
                     -executeMethod BuildScript.BuildAndroid
                 '''
             }
