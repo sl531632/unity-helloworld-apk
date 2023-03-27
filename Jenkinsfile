@@ -12,7 +12,7 @@ pipeline {
 					//sh 'curl -L https://raw.githubusercontent.com/game-ci/docker/develop/scripts/unity-accelerator.sh -o unity-accelerator.sh'
 					//sh 'chmod +x unity-accelerator.sh'
 					//sh './unity-accelerator.sh'
-					
+					sh 'mkdir -p /root/.local/share/unity3d/Unity/'
 					sh 'export UNITY_LICENSE="$(cat /root/.local/share/unity3d/Unity/Unity_lic.ulf)"'
 					sh 'echo 123 $UNITY_LICENSE  ABC'
 					sh 'echo "$UNITY_LICENSE" | base64 --decode | gzip > /root/.local/share/unity3d/Unity/Unity_lic.ulf'
