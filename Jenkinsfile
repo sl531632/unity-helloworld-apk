@@ -13,7 +13,7 @@ pipeline {
 					//sh 'chmod +x unity-accelerator.sh'
 					//sh './unity-accelerator.sh'
 					
-					sh 'export UNITY_LICENSE="$(cat /var/jenkins_home/lic/Unity_v2022.x.ulf)"'
+					sh 'export UNITY_LICENSE="$(cat /root/.local/share/unity3d/Unity/Unity_v2022.x.ulf)"'
 					sh 'echo "$UNITY_LICENSE" | base64 --decode | gzip > /root/.local/share/unity3d/Unity/Unity_v2022.x.ulf'
 
 					// 编译 Unity 项目
